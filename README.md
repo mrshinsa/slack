@@ -1,29 +1,17 @@
-# android-code-exercise
-Skeleton project for the coding exercise for Android candidates
+This exercise focused on two main topics.
+    #1 Handle the denylist and update it accordingly
+    #2 Format the UI according to the spec from the design team
 
-## Skeleton Code Overview
+For #1, I've modified the UserSearchResultDataProviderImpl class to do the following:
+    1. Load the denylist at startup and store it in memory
+    2. Check the search term against the in-memory denylist to determine if the Slack API should be called
+    3. Maintain a separate dynamic runtime denylist for search terms that return no results from the API. This runtime denylist is kept separate to prevent corruption of the original denylist
+    4. For subsequent searches, check both the original in-memory denylist and the dynamic runtime denylist
 
-We're starting you off with a simple app skeleton you can build on. Feel free to make any changes
-you want. Just because we're doing something in the skeleton doesn't mean you should too -- we want
-to see your preferences and skills for Android development.
+For #2, I've modified the UserSearchComposeFragment class to do the following:
+    1. Add the UserSearchItem composable to handle the UI presentation of each element in the list, including the avatar, display name, and username
+    2. Use AsyncImage to load images asynchronously
+    3. Make the list scrollable
+    4. Handle item clicks for future expandability
 
-### Libraries / Dependencies
-All dependencies are managed with a Gradle version catalog in `gradle/libs.versions.toml`. If you
-have a third-party library you want to use, feel free to add it. Remember to write about it in your
-Readme so we know what it does and why you picked it.
-
-### Views or Compose
-We provide two different Fragment skeletons you can pick from: `UserSearchFragment` uses XML views,
-and `UserSearchComposeFragment` uses Compose. There is no requirement to use one or the other: use
-whatever you are comfortable with or think will showcase your skills best in the time you have.
-
-You can pick which fragment to use by changing the `android:name` param in the Activity's layout 
-(`activity_user_search.xml`).
-
-### Dependency Injection
-We know setting up dependency injection can be time consuming, so we provide a basic Dagger setup
-for you to use. This uses dagger.android components, with the `@ContributesAndroidInjector` bindings
-in `ui/dagger/BindingModule.kt`
-
-
-
+As an additional tool, I've added UserSearchResultDataProviderImplTest to test the search results from the Slack API
