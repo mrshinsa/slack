@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    
+    <!-- Search screen colors -->
+    <color name="search_name_color">#1D1C1D</color>
+    <color name="search_username_color">#616061</color>
+    <color name="search_divider_color">#DDDDDD</color>
+    <color name="search_background">#FFFFFF</color>
 </resources>

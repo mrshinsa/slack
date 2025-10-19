@@ -2,4 +2,13 @@
 <resources>
     <dimen name="toolbar_height">48dp</dimen>
     <dimen name="item_margin">16dp</dimen>
+    
+    <!-- Search screen dimensions -->
+    <dimen name="search_avatar_size">28dp</dimen>
+    <dimen name="search_avatar_corner_radius">4dp</dimen>
+    <dimen name="search_row_height">44dp</dimen>
+    <dimen name="search_avatar_left_padding">16dp</dimen>
+    <dimen name="search_avatar_name_spacing">12dp</dimen>
+    <dimen name="search_name_username_spacing">8dp</dimen>
+    <dimen name="search_divider_height">0.5dp</dimen>
 </resources>

@@ -3,8 +3,10 @@ package com.slack.exercise.ui.usersearch
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.slack.exercise.R
 import com.slack.exercise.model.UserSearchResult
 
@@ -29,10 +31,15 @@ class UserSearchAdapter : RecyclerView.Adapter<UserSearchAdapter.UserSearchViewH
   }
 
   override fun onBindViewHolder(holder: UserSearchViewHolder, position: Int) {
-    holder.username.text = userSearchResults[position].username
+    val user = userSearchResults[position]
+    holder.username.text = user.username
+    holder.displayName.text = user.displayName
+    holder.avatar.load(user.avatarUrl)
   }
 
   class UserSearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val username: TextView = itemView.findViewById(R.id.username)
+    val displayName: TextView = itemView.findViewById(R.id.displayName)
+    val avatar: ImageView = itemView.findViewById(R.id.avatar)
   }
 }
