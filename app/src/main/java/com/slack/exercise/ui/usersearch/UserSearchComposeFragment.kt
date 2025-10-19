@@ -137,6 +137,7 @@ private fun UserSearchItem(user: UserSearchResult) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             // Avatar
+            // Load the avatar images asynchronously so that we don't block the UI thread
             AsyncImage(
                 model = user.avatarUrl,
                 contentDescription = "User avatar",

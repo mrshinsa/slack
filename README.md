@@ -24,3 +24,6 @@ You can pick which fragment to use by changing the `android:name` param in the A
 We know setting up dependency injection can be time consuming, so we provide a basic Dagger setup
 for you to use. This uses dagger.android components, with the `@ContributesAndroidInjector` bindings
 in `ui/dagger/BindingModule.kt`
+
+
+

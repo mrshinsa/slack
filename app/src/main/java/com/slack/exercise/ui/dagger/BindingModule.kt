@@ -2,7 +2,6 @@ package com.slack.exercise.ui.dagger
 
 import com.slack.exercise.ui.usersearch.UserSearchActivity
 import com.slack.exercise.ui.usersearch.UserSearchComposeFragment
-import com.slack.exercise.ui.usersearch.UserSearchFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -13,9 +12,6 @@ import dagger.android.ContributesAndroidInjector
 abstract class BindingModule {
   @ContributesAndroidInjector
   abstract fun bindUserSearchActivity(): UserSearchActivity
-
-  @ContributesAndroidInjector
-  abstract fun bindUserSearchFragment(): UserSearchFragment
 
   @ContributesAndroidInjector
   abstract fun bindUserSearchCompoFragment(): UserSearchComposeFragment
